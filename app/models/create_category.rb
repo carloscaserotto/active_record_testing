@@ -1,0 +1,2 @@
+class CreateCategory < ApplicationRecord
+end

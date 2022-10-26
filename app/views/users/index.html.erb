@@ -1,0 +1,18 @@
+<h1>Users</h1>
+
+<%= render "search_user" %>
+
+<% @users.each do |user| %>
+    <ul>
+        <li><%= user.name %></li>
+        <li><%= user.email %>
+            <%= link_to 'View', user_path(user)%>|
+            <%= link_to 'Edit', edit_user_path(user)%>|
+            <%= link_to 'Delete', user_path(user), method: :delete%>
+        </li>
+
+    </ul>
+<% end %>
+<%= link_to 'Articles', articles_path%>|
+    <%= link_to 'Categories', categories_path%>|
+    <%= link_to 'New User', new_user_path%>
